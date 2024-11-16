@@ -1,0 +1,26 @@
+-- Lyrics
+local lyrics = {
+  
+    "after all",
+    "of the wasted",
+    "years",
+    "need to get a taste of your fear",
+    "need a little taste of your blood",
+    "then we can finally be one",
+    "you're everything that i ever wanted",
+    "just a single bite and im through",
+    "there's no need to beg or bargain",
+    "because all i need is",
+    "YOUUUUUUUUUU...........",
+}
+
+-- Chat function
+local function singLyrics()
+    for _, lyric in ipairs(lyrics) do
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(lyric, "All")
+        wait(2.5) -- Adjust the delay as desired
+    end
+end
+
+-- Start singing
+singLyrics()
